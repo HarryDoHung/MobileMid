@@ -1,0 +1,8 @@
+<resources>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">home_layout_github</string>
+    <string name="text_favourite">Add favourite repositories here to have quick  access at any time, without having to search</string>
+    <string name="heading_shortcuts">The thing you need, one tap away</string>
+    <string name="text_shortcuts">Fast acccess your lists of Issues, Pull Requests, or Discussions.</string>
+    <string name="text_recent">Issues and Pull Requests that you\'ve interacted with recently will apppear here. </string>
+</resources>
