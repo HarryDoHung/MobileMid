@@ -107,7 +107,7 @@
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:layout_marginLeft="-3dp"
-                android:src="@drawable/Repositories" />
+                android:src="@drawable/repositories" />
 
             <TextView
                 android:layout_width="100dp"

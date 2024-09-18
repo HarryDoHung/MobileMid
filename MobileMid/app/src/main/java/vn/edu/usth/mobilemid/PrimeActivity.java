@@ -1,5 +1,6 @@
 package vn.edu.usth.mobilemid;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -34,19 +35,21 @@ public class PrimeActivity extends AppCompatActivity {
 
         primePagerAdapter = new PagerAdapter(this, getLifecycle());
         viewPager2.setAdapter(primePagerAdapter);
-        new TabLayoutMediator(tabLayout, viewPager2, (tab, (tab, position) -> {
+        viewPager2.setUserInputEnabled(false);
+
+        new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> {
             switch (position){
                 case 0:
-                    tab.setIcon();
+                    tab.setIcon(R.drawable.home_tab);
                     break;
                 case 1:
-                    tab.setIcon();
+                    tab.setIcon(R.drawable.noti_tab);
                     break;
                 case 2:
-                    tab.setIcon();
+                    tab.setIcon(R.drawable.ic_explore);
                     break;
                 case 3:
-                    tab.setIcon();
+                    tab.setIcon(R.drawable.furina);
                     break;
             }
         }).attach();

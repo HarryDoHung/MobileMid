@@ -15,7 +15,18 @@ public class PagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        return new MergedFragment();
+        switch (position){
+            case 0:
+                return new HomeFragment();
+            case 1:
+                return new NotificationFragment();
+            case 2:
+                return new ExploreFragment();
+            case 3:
+                return new ProfileFragment();
+            default:
+                return new HomeFragment();
+        }
     }
 
     @Override
