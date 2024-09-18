@@ -131,7 +131,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/Discussion"
+                android:background="@drawable/discussion"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="113dp"/>
             <TextView
@@ -186,7 +186,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/Repo"
+                android:background="@drawable/repo"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="212dp"/>
             <TextView
@@ -214,7 +214,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/Org"
+                android:background="@drawable/org"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="263dp"/>
             <TextView
