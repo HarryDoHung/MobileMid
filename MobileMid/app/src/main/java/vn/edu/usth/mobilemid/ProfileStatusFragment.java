@@ -7,8 +7,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class ProfileStatusFragment extends Fragment {
+    private TextView go_profileLayout;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -54,6 +58,14 @@ public class ProfileStatusFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile_status, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile_status, container, false);
+        go_profileLayout = view.findViewById(R.id.back_button);
+        go_profileLayout.setOnClickListener(v -> switchToFragment(3));
+        return view;
+    }
+    private void switchToFragment(int position){
+        if (getActivity()instanceof PrimeActivity){
+            ((PrimeActivity)getActivity()).switchToFragment(position);
+        }
     }
 }

@@ -2,6 +2,9 @@ package vn.edu.usth.mobilemid;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,30 +49,19 @@ public class PrimeActivity extends AppCompatActivity {
                     tab.setIcon(R.drawable.noti_tab);
                     break;
                 case 2:
-                    tab.setIcon(R.drawable.ic_explore);
+                    tab.setIcon(R.drawable.navigation);
                     break;
                 case 3:
                     tab.setIcon(R.drawable.furina);
                     break;
+                default:
+                    tab.view.setVisibility(View.GONE);
             }
         }).attach();
 
-//        if (savedInstanceState == null){
-//            HomeFragment homeFragment = new HomeFragment();
-//            getSupportFragmentManager().beginTransaction().add(R.id.fragment_home, homeFragment).commit();
-//        }
-//
-//        if (savedInstanceState == null){
-//            NotificationFragment notiFragment = new NotificationFragment();
-//            getSupportFragmentManager().beginTransaction().add(R.id.fragment_notification, notiFragment).commit();
-//        }
-//        if (savedInstanceState == null){
-//            ExploreFragment exFragment = new ExploreFragment();
-//            getSupportFragmentManager().beginTransaction().add(R.id.fragment_explore, exFragment).commit();
-//        }
-//        if (savedInstanceState == null){
-//            ProfileFragment profileFragment = new ProfileFragment();
-//            getSupportFragmentManager().beginTransaction().add(R.id.fragment_profile, profileFragment).commit();
-//        }
+    }
+    public void switchToFragment(int position){
+        Log.d("Prime", "Fragment placement" + position);
+        viewPager2.setCurrentItem(position,false);
     }
 }

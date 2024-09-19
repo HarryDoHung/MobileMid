@@ -30,7 +30,7 @@
                 android:id="@+id/back_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Home"
+                android:text="Profile"
                 android:textColor="#00A4FF"
                 android:layout_marginStart="8dp"
                 android:textSize="18sp"

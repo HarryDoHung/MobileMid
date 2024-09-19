@@ -69,7 +69,13 @@ public class HomeShortcutsFragment extends Fragment {
         reviewRequest.setOnClickListener(v -> {
             // Handle Review Requested Click
         });
+        btnCancel.setOnClickListener(v -> switchToFragment(0));
 
         return view;
+    }
+    private void switchToFragment(int position){
+        if (getActivity()instanceof PrimeActivity){
+            ((PrimeActivity)getActivity()).switchToFragment(position);
+        }
     }
 }

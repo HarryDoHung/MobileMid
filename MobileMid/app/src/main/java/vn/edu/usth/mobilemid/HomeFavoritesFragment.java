@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class HomeFavoritesFragment extends Fragment {
+    private Button go_homeLayout;
 
     private Button btnCancel, btnDone;
     private EditText searchBar;
@@ -28,23 +29,13 @@ public class HomeFavoritesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home_favorites, container, false);
-
-        btnCancel = view.findViewById(R.id.btn_cancel);
-        btnDone = view.findViewById(R.id.btn_done);
-        searchBar = view.findViewById(R.id.search_bar_favourite);
-        noRepositoriesSelected = view.findViewById(R.id.title);
-
-        mobiledev2024TextView = view.findViewById(R.id.haisedevmd2024);
-
-        btnCancel.setOnClickListener(v -> {
-        });
-
-        btnDone.setOnClickListener(v -> {
-        });
-
-        mobiledev2024Layout.setOnClickListener(v -> {
-        });
-
+        go_homeLayout = view.findViewById(R.id.btn_cancel);
+        go_homeLayout.setOnClickListener(v -> switchToFragment(0));
         return view;
+    }
+    private void switchToFragment(int position){
+        if (getActivity()instanceof PrimeActivity){
+            ((PrimeActivity)getActivity()).switchToFragment(position);
+        }
     }
 }

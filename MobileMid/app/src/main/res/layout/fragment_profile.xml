@@ -32,6 +32,7 @@
             android:background="@drawable/gear_upload" />
 
         <LinearLayout
+            android:id="@+id/account_status"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:orientation="horizontal"
@@ -86,6 +87,7 @@
                 android:padding="8dp" />
 
             <ImageView
+                android:id="@+id/open_status"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
@@ -238,7 +240,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/activityItemLayout"
+            android:id="@+id/profile_popular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

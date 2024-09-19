@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class ExploreTrendingRepFragment extends Fragment {
+    private TextView go_exploreLayout;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +61,14 @@ public class ExploreTrendingRepFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_explore_trending_rep, container, false);
+        View view = inflater.inflate(R.layout.fragment_explore_trending_rep, container, false);
+        go_exploreLayout = view.findViewById(R.id.trending_back);
+        go_exploreLayout.setOnClickListener(v -> switchToFragment(2));
+        return view;
+    }
+    private void switchToFragment(int position){
+        if (getActivity()instanceof PrimeActivity){
+            ((PrimeActivity)getActivity()).switchToFragment(position);
+        }
     }
 }

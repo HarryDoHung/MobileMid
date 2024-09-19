@@ -76,65 +76,90 @@
             android:textColor="@color/white"
             android:textSize="16sp" />
 
-        <!-- Trending Repositories -->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="103dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/rounded_background">
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/ic_trending"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="12dp"/>
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="40dp"
-                android:text="Trending Repositories"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:layout_marginLeft="56dp"
-                android:layout_marginTop="16dp"/>
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginTop="23dp"
-                android:src="@drawable/arrow_ex"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="15dp"/>
+            <LinearLayout
+                android:id="@+id/go_to_trending"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
 
-            <View android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/ic_trending" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Trending Repositories"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="110dp"
+                    android:src="@drawable/arrow_ex" />
+            </LinearLayout>
+
+            <View android:layout_width="350dp"
                 android:layout_height="1dp"
                 android:background="@color/gray"
                 android:alpha="0.5"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                />
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/ic_awesome_lists"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="63dp"/>
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="40dp"
-                android:text="Awesome Lists"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:layout_marginLeft="56dp"
-                android:layout_marginTop="66dp"/>
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginTop="73dp"
-                android:src="@drawable/arrow_ex"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="15dp"/>
+
+            <LinearLayout
+                android:id="@+id/go_to_awesome"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/go_to_trending"
+                android:layout_marginTop="0dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/ic_awesome_lists" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Awesome Lists"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="110dp"
+                    android:src="@drawable/arrow_ex" />
+            </LinearLayout>
+
 
         </RelativeLayout>
+
+
 
         <LinearLayout
             android:id="@+id/activityLabelLayout"

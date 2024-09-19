@@ -26,7 +26,7 @@
 
         <!-- Back Text -->
         <TextView
-            android:id="@+id/tv_back_text"
+            android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back"
@@ -41,7 +41,7 @@
 
 
         <ImageView
-            android:id="@+id/iv_settings_popular"
+            android:id="@+id/open_setting"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_settings"
@@ -212,6 +212,7 @@
             android:background="@drawable/action" />
 
         <TextView
+            android:id="@+id/open_action"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_marginLeft="56dp"
@@ -243,6 +244,7 @@
             android:background="@drawable/pull" />
 
         <TextView
+            android:id="@+id/open_pull"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_marginLeft="56dp"
@@ -267,6 +269,7 @@
             android:background="@drawable/more" />
 
         <TextView
+            android:id="@+id/open_more"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_marginLeft="56dp"
@@ -319,6 +322,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:id="@+id/open_branch"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
             android:text="Change branch"
@@ -339,6 +343,7 @@
             android:background="@drawable/ic_code" />
 
         <TextView
+            android:id="@+id/open_code"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_marginLeft="56dp"
@@ -370,6 +375,7 @@
             android:background="@drawable/ic_commits" />
 
         <TextView
+            android:id="@+id/open_commits"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_marginLeft="56dp"

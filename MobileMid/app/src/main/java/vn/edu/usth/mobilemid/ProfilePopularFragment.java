@@ -7,6 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +18,14 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class ProfilePopularFragment extends Fragment {
+    private TextView go_profileLayout;
+    private TextView open_action;
+    private TextView open_pull;
+    private TextView open_more;
+    private ImageView open_setting;
+    private TextView open_branch;
+    private TextView open_commit;
+    private TextView open_code;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +71,29 @@ public class ProfilePopularFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile_popular, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile_popular, container, false);
+        go_profileLayout = view.findViewById(R.id.back_button);
+        open_action = view.findViewById(R.id.open_action);
+        open_pull = view.findViewById(R.id.open_pull);
+        open_more = view.findViewById(R.id.open_more);
+        open_branch = view.findViewById(R.id.open_branch);
+        open_code = view.findViewById(R.id.open_code);
+        open_commit = view.findViewById(R.id.open_commits);
+        open_setting = view.findViewById(R.id.open_setting);
+
+        go_profileLayout.setOnClickListener(v -> switchToFragment(3));
+        open_action.setOnClickListener(v -> switchToFragment(20));
+        open_pull.setOnClickListener(v -> switchToFragment(20));
+        open_more.setOnClickListener(v -> switchToFragment(20));
+        open_branch.setOnClickListener(v -> switchToFragment(20));
+        open_commit.setOnClickListener(v -> switchToFragment(20));
+        open_code.setOnClickListener(v -> switchToFragment(20));
+        open_setting.setOnClickListener(v -> switchToFragment(20));
+        return view;
+    }
+    private void switchToFragment(int position){
+        if (getActivity()instanceof PrimeActivity){
+            ((PrimeActivity)getActivity()).switchToFragment(position);
+        }
     }
 }

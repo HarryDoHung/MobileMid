@@ -66,9 +66,8 @@
                 android:drawableStart="@android:drawable/ic_menu_search"
                 android:drawablePadding="8dp"
                 android:hint="Search"
-                android:hintTextColor="#AAAAAA"
                 android:padding="8dp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black"
                 android:textSize="10sp" />
         </LinearLayout>
 

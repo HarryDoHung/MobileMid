@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +16,11 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class ProfileFragment extends Fragment {
+    private ImageView go_statusLayout;
+    private LinearLayout go_repoLayout;
+    private LinearLayout go_starLayout;
+    private LinearLayout go_orgLayout;
+    private LinearLayout go_popularLayout;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +66,25 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        go_statusLayout = view.findViewById(R.id.open_status);
+        go_repoLayout = view.findViewById(R.id.repositoriesLayout);
+        go_starLayout = view.findViewById(R.id.starredLayout);
+        go_orgLayout = view.findViewById(R.id.organizationsLayout);
+        go_popularLayout = view.findViewById(R.id.profile_popular);
+
+        go_statusLayout.setOnClickListener(view10 -> switchToFragment(15));
+        go_popularLayout.setOnClickListener(view11 -> switchToFragment(16));
+        go_repoLayout.setOnClickListener(view12 -> switchToFragment(17));
+        go_starLayout.setOnClickListener(view13 -> switchToFragment(18));
+        go_orgLayout.setOnClickListener(view14 -> switchToFragment(19));
+
+
+        return view;
+    }
+    private void switchToFragment(int position){
+        if (getActivity()instanceof PrimeActivity){
+            ((PrimeActivity)getActivity()).switchToFragment(position);
+        }
     }
 }

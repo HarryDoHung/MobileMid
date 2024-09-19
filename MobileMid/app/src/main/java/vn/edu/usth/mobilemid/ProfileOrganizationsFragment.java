@@ -7,17 +7,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ExploreFragment#newInstance} factory method to
+ * Use the {@link ProfileOrganizationsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ExploreFragment extends Fragment {
-    private LinearLayout go_trendingLayout;
-    private LinearLayout go_awesomeLayout;
+public class ProfileOrganizationsFragment extends Fragment {
+    private TextView go_profileLayout;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +26,7 @@ public class ExploreFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ExploreFragment() {
+    public ProfileOrganizationsFragment() {
         // Required empty public constructor
     }
 
@@ -38,11 +36,11 @@ public class ExploreFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ExploreFragment.
+     * @return A new instance of fragment ProfileOrganizationsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ExploreFragment newInstance(String param1, String param2) {
-        ExploreFragment fragment = new ExploreFragment();
+    public static ProfileOrganizationsFragment newInstance(String param1, String param2) {
+        ProfileOrganizationsFragment fragment = new ProfileOrganizationsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,17 +61,13 @@ public class ExploreFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_explore, container, false);
-
-        go_trendingLayout = view.findViewById(R.id.go_to_trending);
-        go_awesomeLayout = view.findViewById(R.id.go_to_awesome);
-
-        go_trendingLayout.setOnClickListener(view8 -> switchToFragment(13));
-        go_awesomeLayout.setOnClickListener(vview9 -> switchToFragment(14));
+        View view = inflater.inflate(R.layout.fragment_profile_organizations, container, false);
+        go_profileLayout = view.findViewById(R.id.back_button);
+        go_profileLayout.setOnClickListener(v -> switchToFragment(3));
         return view;
     }
     private void switchToFragment(int position){
-        if (getActivity() instanceof PrimeActivity){
+        if (getActivity()instanceof PrimeActivity){
             ((PrimeActivity)getActivity()).switchToFragment(position);
         }
     }

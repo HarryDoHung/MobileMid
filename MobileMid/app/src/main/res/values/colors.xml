@@ -27,4 +27,5 @@
     <color name="graphite_gray">#333333</color>
     <color name="gray">#808080</color>
     <color name="ligth_gray">#A9A9A9</color>
+    <color name="dark_white">#C5C5C5</color>
 </resources>
